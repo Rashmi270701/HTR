@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+     <head>
+       <style>
+          
+           label[k]
+           {
+            font-size: 40px;
+            margin-left: 90px;
+            margin-top: 40px;
+
+           }
+           div[a]{
+           
+             background-color: aquamarine;
+             width: 700px;
+             height: 440px;
+              margin-top:2%;
+           }
+           div[g]{
+           
+           background-color: rgb(15, 230, 158);
+           width: 800px;
+           height: 490px;
+            margin-top:2%;
+         }
+         div[j]{
+           
+           background-color: rgb(4, 73, 50);
+           width: 900px;
+           height: 530px;
+            margin-top:2%;
+         }
+           label[b]{
+               font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+               font-size: 60px;
+             
+           }
+           input[h]
+           {
+
+            font-size: 20px;
+
+           }
+           input[o]:hover
+           {
+             background-color: black;
+             color: rgb(236, 234, 234);
+             border-radius: 100px;
+           }
+           input[o]
+           {
+
+            font-size: 35px;
+            margin-top: 50px;
+            background-color: rgb(236, 234, 232);
+            color: rgb(24, 2, 2);
+           }
+       </style>  
+     </head>
+ <center >  <label b>Handwritten Text Recognizer</label></center>
+ <center>
+   <div j>
+  <div g>
+ <div a>
+<label k>Upload Image: </label>
+</label> 
+<input h type="file" id="file" onchange="return fileValidation()"/>
+
+
+<div id="imagePreview"></div>
+<input o type="submit" value="Submit">
+</div>
+</center>  
+</div>
+</div>
+
+<script>
+  function fileValidation(){
+    var fileInput = document.getElementById('file');
+    var filePath = fileInput.value;
+    var allowedExtensions = /(\.jpg|\.jpeg|\.png)$/i;
+    if(!allowedExtensions.exec(filePath)){
+        alert('Please upload file having extensions .jpeg/.jpg/.png only.');
+        fileInput.value = '';
+        return false;
+    }else
+    {
+      alert('Image Succefully uploaded');
+    }
+    }
+</script>
+
+</html>
